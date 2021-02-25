@@ -16,7 +16,7 @@ a {
 }
 
 body {
-  background-color: none;
+  background-color: transparent;
 }
 /*
 Colors that may be used
@@ -49,6 +49,7 @@ h3 {
 }
 a {
    color: #357b70;
+   text-decoration: none;
  }
 
 a:visited {
@@ -63,11 +64,85 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-input, texture, select, button {
+input, texture, select, button, button1, button2 {
   font-family: system-ui;
 }
 
-.button1, button {
+/* about page buttons*/
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  font-weight: 500;
+  margin: 5px;
+  padding: 500px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  min-height: 25vh;
+}
+
+.button1 {
+  width: 300px;
+  height: 60px;
+  border: none;
+  color: white;
+  background-color: rgb(255,0,68);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #f9e506;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+}
+
+.button1:hover {
+  box-shadow: inset 300px 0 0 0 #f9e506;
+  cursor: pointer;
+  color: #000;
+}
+
+.button2 {
+  width: 300px;
+  height: 60px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  transition: ease-out 0.3s;
+  font-size: 2rem;
+  outline: none;
+  border: 3px solid #42FBF2;
+  position: relative;
+  z-index: 1;
+}
+
+.button2:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+.button2:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #42FBF2;
+}
+
+.button2:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+/* Home Page Buttons*/
+button {
   text-align: center;
   border: none;
   font-family: inherit;
@@ -84,8 +159,6 @@ input, texture, select, button {
   border-bottom: 2px solid rgba(0, 0, 0, 0.4);
 }
 
-.button1:hover,
-.button1:focus,
 button:hover,
 button:focus {
   color: black;
@@ -93,7 +166,7 @@ button:focus {
   opacity: 0.8;
 }
 
-.button, {
+.button {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
@@ -157,6 +230,14 @@ div {
   border-radius: 50%;
 }
 
+.profile__portrait:hover {
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 0.8;
+    transform: translate(0, -10px);
+    transition: .6s;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -174,6 +255,15 @@ div {
     text-align: center;
 }
 
+.page-footer {
+  border-bottom: 10px;
+  background-color: skyblue;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
 .profile__text {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100px;
@@ -186,6 +276,12 @@ div {
   display: flex;
   width: 100%;
   padding: 20px;
+}
+
+.page-header {
+  border-bottom: 10px;
+  background-color: skyblue;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
 }
 
 .page-header__item {
@@ -351,8 +447,8 @@ input {
 table {
   padding: 0;
   margin: 0 auto;
+  text-align: center;
 }
-
 
 @-webkit-keyframes color-change {
   0% {

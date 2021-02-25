@@ -9,7 +9,7 @@ a {
 }
 
 body {
-  background-color: none;
+  background-color: transparent;
 }
 /*
 Colors that may be used
@@ -84,7 +84,7 @@ button:focus {
   opacity: 0.8;
 }
 
-.button, {
+.button {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
@@ -167,6 +167,12 @@ div {
   display: flex;
   width: 100%;
   padding: 20px;
+}
+
+.page-header {
+  border-bottom: 10px;
+  box-shadow: 10px;
+  background-color: lightgray;
 }
 
 .page-header__item {
