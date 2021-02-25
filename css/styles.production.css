@@ -256,7 +256,7 @@ div {
 }
 
 .page-footer {
-  border-bottom: 10px;
+  border-bottom: 5px;
   background-color: skyblue;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
   max-width: 1200px;
